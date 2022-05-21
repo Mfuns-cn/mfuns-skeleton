@@ -2,12 +2,15 @@
 .settings/
 .project
 *.patch
-.idea/
 .git/
 runtime/
 vendor/
 .phpintel/
 .env
 .DS_Store
+.phpunit*
 *.cache
-*.lock
+*.rdb
+*.log
+build-php-shell/
+.idea/
