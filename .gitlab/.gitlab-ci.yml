@@ -1,0 +1,13 @@
+phpstan:
+    image: hyperf/hyperf:8.0-alpine-v3.12-swoole
+    stage: test
+    script:
+        - composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
+        - composer install && php bin/hyperf.php
+        - composer run analyse
+build:
+    image: docker:git
+    stage: build
+    script:
+        - docker -v
+        - docker build -t hyperf .
